@@ -5,15 +5,17 @@ import random
 user_range = int(input("Enter Range Number ->  ")) 
 randomNumber = random.randint(0, user_range)
 print(randomNumber)
-
+guesses = 0
 while True:
+    guesses += 1
     user_guess = int(input("Make a Guess -> "))
-    if user_guess < randomNumber:
-        print("Guess Higher ")
-    if user_guess > randomNumber:
-        print("Guess Lower ")    
+       
     if user_guess == randomNumber:
-        print("Good One ")
+        print("Good Job You took ", guesses, "Guesses")
         break
-    else:print("Try Again")
+    else:
+     if user_guess < randomNumber:
+          print("Guess Higher ")
+     else:
+        print("Guess Lower ") 
     

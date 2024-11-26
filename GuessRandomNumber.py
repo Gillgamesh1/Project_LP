@@ -8,6 +8,10 @@ print(randomNumber)
 
 while True:
     user_guess = int(input("Make a Guess -> "))
+    if user_guess < randomNumber:
+        print("Guess Higher ")
+    if user_guess > randomNumber:
+        print("Guess Lower ")    
     if user_guess == randomNumber:
         print("Good One ")
         break
